@@ -1,0 +1,13 @@
+.results{
+  justify-content: center;
+  padding: 30px 150px;
+}
+
+.nav__selector{
+  display: flex;
+  justify-content: center;
+}
+
+.nav__selector__title {
+  margin-right: 5px;
+}

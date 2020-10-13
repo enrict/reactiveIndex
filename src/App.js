@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
+import Navbar from "./Navbar";
+import Results from "./Results";
 
 function App() {
+  // if a category has not been selected, show UK Busines news
+  const [category, setCategory] = useState("business");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {/* navbar - placing the nav bar */}
+      <Navbar setCategory={setCategory} />
+      {/* results - diplaying all results */}
+      <Results category={category} />
     </div>
   );
 }
